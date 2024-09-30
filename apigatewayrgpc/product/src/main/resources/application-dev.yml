@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: product
+  datasource:
+    url: jdbc:postgresql://192.168.56.38:5432/product
+    username: postgres
+    password: password123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8081
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+    root: INFO
+    com.ojasare.productservice: TRACE
+  file:
+    name: logs/product-service.log
+grpc:
+  server:
+    port: 9090

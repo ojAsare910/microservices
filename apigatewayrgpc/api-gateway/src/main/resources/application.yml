@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 9000
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+    root: INFO
+    com.ojasare.apigateway: TRACE
+  file:
+    name: logs/api-gateway.log

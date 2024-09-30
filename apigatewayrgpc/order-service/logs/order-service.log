@@ -1,0 +1,162 @@
+2024-09-30T16:19:45.546Z  INFO 9996 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Starting GrpcServiceApplicationTests using Java 21.0.4 with PID 9996 (started by Justice in C:\Users\Justice\IdeaProjects\microservices\microservices\apigatewayrgpc\order-service)
+2024-09-30T16:19:45.547Z DEBUG 9996 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-09-30T16:19:45.548Z  INFO 9996 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : The following 1 profile is active: "dev"
+2024-09-30T16:19:45.617Z TRACE 9996 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65e7f52a, started on Mon Sep 30 16:19:45 GMT 2024
+2024-09-30T16:19:46.920Z  INFO 9996 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-30T16:19:47.077Z  INFO 9996 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 1 JPA repository interface.
+2024-09-30T16:19:47.709Z TRACE 9996 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'messageSource' bean, using [Empty MessageSource]
+2024-09-30T16:19:47.709Z TRACE 9996 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2024-09-30T16:19:48.019Z  INFO 9996 --- [order] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-30T16:19:48.167Z  INFO 9996 --- [order] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-30T16:19:48.248Z  INFO 9996 --- [order] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-30T16:19:49.092Z  INFO 9996 --- [order] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-30T16:19:49.161Z  INFO 9996 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-30T16:19:49.553Z  INFO 9996 --- [order] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e517c9e
+2024-09-30T16:19:49.557Z  INFO 9996 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-30T16:19:51.329Z  INFO 9996 --- [order] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-30T16:19:51.419Z  WARN 9996 --- [order] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-30T16:19:51.420Z  WARN 9996 --- [order] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk9jvsx18f8w7fjm9esi95fqosi" of relation "orders" does not exist, skipping
+2024-09-30T16:19:51.428Z  INFO 9996 --- [order] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T16:19:52.518Z  WARN 9996 --- [order] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-30T16:19:52.705Z TRACE 9996 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.o.g.c.OrderController:
+	{GET [/v1/api/order/{id}]}: getOrder(Long)
+2024-09-30T16:19:52.718Z TRACE 9996 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-30T16:19:52.723Z DEBUG 9996 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-09-30T16:19:52.740Z DEBUG 9996 --- [order] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-09-30T16:19:52.961Z TRACE 9996 --- [order] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-09-30T16:19:52.989Z TRACE 9996 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-30T16:19:52.990Z TRACE 9996 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-30T16:19:52.991Z DEBUG 9996 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-30T16:19:53.073Z DEBUG 9996 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-30T16:19:53.145Z DEBUG 9996 --- [order] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-30T16:19:53.453Z TRACE 9996 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@d0538b3]
+2024-09-30T16:19:53.474Z  INFO 9996 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Started GrpcServiceApplicationTests in 8.553 seconds (process running for 10.479)
+2024-09-30T16:19:54.323Z DEBUG 9996 --- [order] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@65e7f52a, started on Mon Sep 30 16:19:45 GMT 2024
+2024-09-30T16:19:54.329Z  INFO 9996 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T16:19:54.333Z  INFO 9996 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-30T16:19:54.347Z  INFO 9996 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-30T16:28:57.289Z  INFO 47380 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Starting GrpcServiceApplicationTests using Java 21.0.4 with PID 47380 (started by Justice in C:\Users\Justice\IdeaProjects\microservices\microservices\apigatewayrgpc\order-service)
+2024-09-30T16:28:57.290Z DEBUG 47380 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-09-30T16:28:57.291Z  INFO 47380 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : The following 1 profile is active: "dev"
+2024-09-30T16:28:57.332Z TRACE 47380 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@75699e35, started on Mon Sep 30 16:28:57 GMT 2024
+2024-09-30T16:28:58.142Z  INFO 47380 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-30T16:28:58.217Z  INFO 47380 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2024-09-30T16:28:58.567Z TRACE 47380 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'messageSource' bean, using [Empty MessageSource]
+2024-09-30T16:28:58.568Z TRACE 47380 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2024-09-30T16:28:58.764Z  INFO 47380 --- [order] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-30T16:28:58.840Z  INFO 47380 --- [order] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-30T16:28:58.888Z  INFO 47380 --- [order] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-30T16:28:59.286Z  INFO 47380 --- [order] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-30T16:28:59.322Z  INFO 47380 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-30T16:28:59.494Z  INFO 47380 --- [order] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f012923
+2024-09-30T16:28:59.496Z  INFO 47380 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-30T16:29:00.435Z  INFO 47380 --- [order] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-30T16:29:00.483Z  INFO 47380 --- [order] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T16:29:01.197Z  WARN 47380 --- [order] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-30T16:29:01.291Z TRACE 47380 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.o.g.c.OrderController:
+	{GET [/v1/api/order/{id}]}: getOrder(Long)
+2024-09-30T16:29:01.299Z TRACE 47380 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-30T16:29:01.302Z DEBUG 47380 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-09-30T16:29:01.311Z DEBUG 47380 --- [order] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-09-30T16:29:01.428Z TRACE 47380 --- [order] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-09-30T16:29:01.439Z TRACE 47380 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-30T16:29:01.440Z TRACE 47380 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-30T16:29:01.440Z DEBUG 47380 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-30T16:29:01.497Z DEBUG 47380 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-30T16:29:01.542Z DEBUG 47380 --- [order] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-30T16:29:01.737Z TRACE 47380 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@6f6998b6]
+2024-09-30T16:29:01.751Z  INFO 47380 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Started GrpcServiceApplicationTests in 4.816 seconds (process running for 5.96)
+2024-09-30T16:29:02.354Z DEBUG 47380 --- [order] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@75699e35, started on Mon Sep 30 16:28:57 GMT 2024
+2024-09-30T16:29:02.359Z  INFO 47380 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T16:29:02.362Z  INFO 47380 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-30T16:29:02.368Z  INFO 47380 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-30T20:19:06.915Z  INFO 9408 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Starting GrpcServiceApplicationTests using Java 21.0.4 with PID 9408 (started by Justice in C:\Users\Justice\IdeaProjects\microservices\microservices\apigatewayrgpc\order-service)
+2024-09-30T20:19:06.917Z DEBUG 9408 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-09-30T20:19:06.918Z  INFO 9408 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : The following 1 profile is active: "dev"
+2024-09-30T20:19:06.994Z TRACE 9408 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@75699e35, started on Mon Sep 30 20:19:06 GMT 2024
+2024-09-30T20:19:08.341Z  INFO 9408 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-30T20:19:08.621Z  INFO 9408 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 261 ms. Found 1 JPA repository interface.
+2024-09-30T20:19:09.528Z TRACE 9408 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'messageSource' bean, using [Empty MessageSource]
+2024-09-30T20:19:09.529Z TRACE 9408 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2024-09-30T20:19:09.893Z  INFO 9408 --- [order] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-30T20:19:10.060Z  INFO 9408 --- [order] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-30T20:19:10.146Z  INFO 9408 --- [order] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-30T20:19:10.837Z  INFO 9408 --- [order] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-30T20:19:10.899Z  INFO 9408 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-30T20:19:11.267Z  INFO 9408 --- [order] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ed8b44
+2024-09-30T20:19:11.270Z  INFO 9408 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-30T20:19:12.918Z  INFO 9408 --- [order] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-30T20:19:12.991Z  INFO 9408 --- [order] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T20:19:14.213Z  WARN 9408 --- [order] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-30T20:19:14.343Z TRACE 9408 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.o.g.c.OrderController:
+	{GET [/v1/api/order/{id}]}: getOrder(Long)
+	{POST [/v1/api/order/create]}: getProductOrder(OrderRequest)
+	{GET [/v1/api/order/all]}: getAllOrders()
+2024-09-30T20:19:14.359Z TRACE 9408 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-30T20:19:14.365Z DEBUG 9408 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-09-30T20:19:14.377Z DEBUG 9408 --- [order] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-09-30T20:19:14.532Z TRACE 9408 --- [order] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-09-30T20:19:14.548Z TRACE 9408 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-30T20:19:14.549Z TRACE 9408 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-30T20:19:14.549Z DEBUG 9408 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-30T20:19:14.637Z DEBUG 9408 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-30T20:19:14.687Z DEBUG 9408 --- [order] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-30T20:19:14.976Z TRACE 9408 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@5d1907fb]
+2024-09-30T20:19:14.996Z  INFO 9408 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Started GrpcServiceApplicationTests in 8.664 seconds (process running for 10.649)
+2024-09-30T20:19:15.989Z DEBUG 9408 --- [order] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@75699e35, started on Mon Sep 30 20:19:06 GMT 2024
+2024-09-30T20:19:15.995Z  INFO 9408 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T20:19:16.000Z  INFO 9408 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-30T20:19:16.008Z  INFO 9408 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-30T20:20:57.584Z  INFO 15584 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Starting GrpcServiceApplicationTests using Java 21.0.4 with PID 15584 (started by Justice in C:\Users\Justice\IdeaProjects\microservices\microservices\apigatewayrgpc\order-service)
+2024-09-30T20:20:57.588Z DEBUG 15584 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-09-30T20:20:57.591Z  INFO 15584 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : The following 1 profile is active: "dev"
+2024-09-30T20:20:57.674Z TRACE 15584 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@75699e35, started on Mon Sep 30 20:20:57 GMT 2024
+2024-09-30T20:20:58.969Z  INFO 15584 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-30T20:20:59.096Z  INFO 15584 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2024-09-30T20:20:59.623Z TRACE 15584 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'messageSource' bean, using [Empty MessageSource]
+2024-09-30T20:20:59.624Z TRACE 15584 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2024-09-30T20:20:59.904Z  INFO 15584 --- [order] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-30T20:21:00.035Z  INFO 15584 --- [order] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-30T20:21:00.114Z  INFO 15584 --- [order] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-30T20:21:00.732Z  INFO 15584 --- [order] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-30T20:21:00.789Z  INFO 15584 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-30T20:21:01.095Z  INFO 15584 --- [order] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d4b019e
+2024-09-30T20:21:01.097Z  INFO 15584 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-30T20:21:02.469Z  INFO 15584 --- [order] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-30T20:21:02.528Z  INFO 15584 --- [order] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T20:21:03.595Z  WARN 15584 --- [order] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-30T20:21:03.739Z TRACE 15584 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.o.g.c.OrderController:
+	{GET [/v1/api/order/{id}]}: getOrder(Long)
+	{POST [/v1/api/order/create]}: getProductOrder(OrderRequest)
+	{GET [/v1/api/order/all]}: getAllOrders()
+2024-09-30T20:21:03.754Z TRACE 15584 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-30T20:21:03.758Z DEBUG 15584 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-09-30T20:21:03.770Z DEBUG 15584 --- [order] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-09-30T20:21:03.972Z TRACE 15584 --- [order] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-09-30T20:21:03.991Z TRACE 15584 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-09-30T20:21:03.991Z TRACE 15584 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-30T20:21:03.992Z DEBUG 15584 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-30T20:21:04.071Z DEBUG 15584 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-30T20:21:04.147Z DEBUG 15584 --- [order] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-30T20:21:04.403Z TRACE 15584 --- [order] [main] o.s.w.c.s.GenericWebApplicationContext   : Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@4ad57db1]
+2024-09-30T20:21:04.424Z  INFO 15584 --- [order] [main] c.o.g.GrpcServiceApplicationTests        : Started GrpcServiceApplicationTests in 7.411 seconds (process running for 9.287)
+2024-09-30T20:21:05.239Z DEBUG 15584 --- [order] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@75699e35, started on Mon Sep 30 20:20:57 GMT 2024
+2024-09-30T20:21:05.246Z  INFO 15584 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-30T20:21:05.250Z  INFO 15584 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-30T20:21:05.283Z  INFO 15584 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

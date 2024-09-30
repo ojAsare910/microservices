@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ProductService
+  datasource:
+    url: ${POSTGRES_URL}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: ${SERVER_PORT}
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+    root: INFO
+    com.ojasare.productservice: TRACE
+  file:
+    name: logs/product-service.log
