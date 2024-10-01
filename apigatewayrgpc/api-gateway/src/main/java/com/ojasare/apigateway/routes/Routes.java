@@ -14,14 +14,18 @@ public class Routes {
     @Bean
     public RouterFunction<ServerResponse> productServiceRoute() {
         return GatewayRouterFunctions.route("product_service")
-                .route(RequestPredicates.path("/v1/api/product/**"), HandlerFunctions.http("http://192.168.56.38:8081"))
+                .route(RequestPredicates
+                        .path("/v1/api/product/**"), HandlerFunctions
+                        .http("http://grpc-server:8081"))
                 .build();
     }
 
     @Bean
     public RouterFunction<ServerResponse> orderServiceRoute() {
         return GatewayRouterFunctions.route("order_service")
-                .route(RequestPredicates.path("/v1/api/order/**"), HandlerFunctions.http("http://192.168.56.38:8082"))
+                .route(RequestPredicates
+                        .path("/v1/api/order/**"), HandlerFunctions
+                        .http("http://grpc-client:8082"))
                 .build();
     }
 

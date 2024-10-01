@@ -1,0 +1,42 @@
+2024-10-01T08:56:52.715Z  INFO 1 --- [order] [main] c.o.grpcservice.GrpcServiceApplication   : Starting GrpcServiceApplication v1 using Java 21 with PID 1 (/app/order-service.jar started by root in /app)
+2024-10-01T08:56:52.722Z DEBUG 1 --- [order] [main] c.o.grpcservice.GrpcServiceApplication   : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-01T08:56:52.723Z  INFO 1 --- [order] [main] c.o.grpcservice.GrpcServiceApplication   : The following 1 profile is active: "dev"
+2024-10-01T08:56:56.296Z  INFO 1 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T08:56:56.423Z  INFO 1 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2024-10-01T08:56:57.951Z  INFO 1 --- [order] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-10-01T08:56:58.000Z  INFO 1 --- [order] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-01T08:56:58.009Z  INFO 1 --- [order] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-01T08:56:58.064Z  INFO 1 --- [order] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-01T08:56:58.065Z  INFO 1 --- [order] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5096 ms
+2024-10-01T08:56:58.522Z  INFO 1 --- [order] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T08:56:58.688Z  INFO 1 --- [order] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T08:56:58.842Z  INFO 1 --- [order] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T08:56:59.646Z  INFO 1 --- [order] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T08:56:59.696Z  INFO 1 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T08:57:00.226Z  INFO 1 --- [order] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7996d0d4
+2024-10-01T08:57:00.228Z  INFO 1 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T08:57:02.188Z  INFO 1 --- [order] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T08:57:02.299Z  INFO 1 --- [order] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T08:57:03.858Z  WARN 1 --- [order] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T08:57:04.061Z TRACE 1 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.o.g.c.OrderController:
+	{GET [/v1/api/order/{id}]}: getOrder(Long)
+	{GET [/v1/api/order/all]}: getAllOrders()
+	{POST [/v1/api/order/create]}: getProductOrder(OrderRequest)
+2024-10-01T08:57:04.083Z TRACE 1 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-10-01T08:57:04.093Z DEBUG 1 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-10-01T08:57:04.135Z DEBUG 1 --- [order] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-10-01T08:57:04.311Z TRACE 1 --- [order] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-10-01T08:57:04.333Z TRACE 1 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-10-01T08:57:04.333Z TRACE 1 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-10-01T08:57:04.334Z DEBUG 1 --- [order] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-10-01T08:57:04.407Z DEBUG 1 --- [order] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-01T08:57:04.489Z DEBUG 1 --- [order] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-01T08:57:05.273Z  INFO 1 --- [order] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2024-10-01T08:57:05.305Z  INFO 1 --- [order] [main] c.o.grpcservice.GrpcServiceApplication   : Started GrpcServiceApplication in 13.933 seconds (process running for 15.422)
+2024-10-01T08:59:47.478Z  INFO 1 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T08:59:47.480Z  INFO 1 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T08:59:47.490Z  INFO 1 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

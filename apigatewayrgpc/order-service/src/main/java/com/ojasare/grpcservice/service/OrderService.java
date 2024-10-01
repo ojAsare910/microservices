@@ -2,7 +2,6 @@ package com.ojasare.grpcservice.service;
 
 import com.ojasare.grpcservice.dto.OrderRequest;
 import com.ojasare.grpcservice.dto.OrderResponse;
-import com.ojasare.grpcservice.exception.DataIntegrityViolationException;
 import com.ojasare.grpcservice.exception.NotFoundException;
 import com.ojasare.grpcservice.grpc.ProductRequest;
 import com.ojasare.grpcservice.grpc.ProductResponse;
@@ -11,6 +10,8 @@ import com.ojasare.grpcservice.model.Order;
 import com.ojasare.grpcservice.repository.OrderRepository;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import net.devh.boot.grpc.client.channelfactory.GrpcChannelConfigurer;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class OrderService implements OrderIService {
 
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("192.168.56.38", 9090)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("grpc-server", 9090)
                 .usePlaintext()
                 .build();
         productServiceBlockingStub = ProductServiceGrpc.newBlockingStub(channel);
@@ -82,5 +83,4 @@ public class OrderService implements OrderIService {
                         .build())
                 .collect(Collectors.toList());
     }
-
 }
