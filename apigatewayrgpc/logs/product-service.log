@@ -55,3 +55,51 @@
 2024-10-01T08:59:47.764Z  INFO 1 --- [product] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-01T08:59:47.766Z  INFO 1 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-10-01T08:59:47.771Z  INFO 1 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T09:00:11.637Z  INFO 1 --- [product] [main] com.ojasare.product.ProductApplication   : Starting ProductApplication v1 using Java 21 with PID 1 (/app/product.jar started by root in /app)
+2024-10-01T09:00:11.655Z  INFO 1 --- [product] [main] com.ojasare.product.ProductApplication   : The following 1 profile is active: "dev"
+2024-10-01T09:00:14.182Z  INFO 1 --- [product] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T09:00:14.344Z  INFO 1 --- [product] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interface.
+2024-10-01T09:00:15.901Z  INFO 1 --- [product] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-10-01T09:00:15.970Z  INFO 1 --- [product] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-01T09:00:15.977Z  INFO 1 --- [product] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-01T09:00:16.036Z  INFO 1 --- [product] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-01T09:00:16.038Z  INFO 1 --- [product] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4173 ms
+2024-10-01T09:00:16.492Z  INFO 1 --- [product] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T09:00:16.611Z  INFO 1 --- [product] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T09:00:16.684Z  INFO 1 --- [product] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T09:00:17.947Z  INFO 1 --- [product] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T09:00:18.052Z  INFO 1 --- [product] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T09:00:18.719Z  INFO 1 --- [product] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@628ba266
+2024-10-01T09:00:18.721Z  INFO 1 --- [product] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T09:00:20.815Z  INFO 1 --- [product] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T09:00:20.889Z  INFO 1 --- [product] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T09:00:21.651Z  WARN 1 --- [product] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T09:00:21.800Z TRACE 1 --- [product] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.o.p.c.ProductController:
+	{POST [/v1/api/product/create]}: createProduct(ProductRequest)
+	{GET [/v1/api/product/{id}]}: getProduct(Long)
+	{GET [/v1/api/product/all]}: getAllProducts()
+	{PUT [/v1/api/product/update/{id}]}: updateProduct(Long,ProductRequest)
+2024-10-01T09:00:21.817Z TRACE 1 --- [product] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-10-01T09:00:21.825Z DEBUG 1 --- [product] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-10-01T09:00:21.835Z DEBUG 1 --- [product] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-10-01T09:00:21.946Z TRACE 1 --- [product] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-10-01T09:00:21.964Z TRACE 1 --- [product] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-10-01T09:00:21.965Z TRACE 1 --- [product] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-10-01T09:00:21.966Z DEBUG 1 --- [product] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-10-01T09:00:22.047Z DEBUG 1 --- [product] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-01T09:00:22.088Z DEBUG 1 --- [product] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-01T09:00:22.156Z  INFO 1 --- [product] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2024-10-01T09:00:22.549Z  INFO 1 --- [product] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-10-01T09:00:22.740Z  INFO 1 --- [product] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: ProductService, bean: productGRPCService, class: com.ojasare.product.service.ProductGRPCService
+2024-10-01T09:00:22.749Z  INFO 1 --- [product] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
+2024-10-01T09:00:22.750Z  INFO 1 --- [product] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2024-10-01T09:00:22.931Z  INFO 1 --- [product] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9090
+2024-10-01T09:00:22.947Z  INFO 1 --- [product] [main] com.ojasare.product.ProductApplication   : Started ProductApplication in 12.875 seconds (process running for 13.946)
+2024-10-01T09:21:05.463Z  INFO 1 --- [product] [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : Completed gRPC server shutdown
+2024-10-01T09:21:05.469Z  INFO 1 --- [product] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T09:21:05.472Z  INFO 1 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T09:21:05.477Z  INFO 1 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

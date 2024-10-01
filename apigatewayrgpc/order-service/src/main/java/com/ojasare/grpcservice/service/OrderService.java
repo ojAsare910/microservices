@@ -10,8 +10,6 @@ import com.ojasare.grpcservice.model.Order;
 import com.ojasare.grpcservice.repository.OrderRepository;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import net.devh.boot.grpc.client.channelfactory.GrpcChannelConfigurer;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
