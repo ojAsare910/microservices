@@ -6,6 +6,7 @@ import com.ojasare.grpcservice.dto.OrderResponse;
 import com.ojasare.grpcservice.grpc.ProductResponse;
 import com.ojasare.grpcservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,11 +19,20 @@ public class OrderController {
 
     private final OrderService orderService;
 
+//    @PostMapping("/create")
+//    public ResponseEntity<String> getProductOrder(@RequestBody OrderRequest orderRequest) throws Exception {
+//        ProductResponse productResponse = orderService.getProduct(orderRequest);
+//        String jsonResponse = JsonFormat.printer().print(productResponse);
+//        return ResponseEntity.ok(jsonResponse);
+//    }
+
     @PostMapping("/create")
-    public ResponseEntity<String> getProductOrder(@RequestBody OrderRequest orderRequest) throws Exception {
+    public ResponseEntity<?> placeOrder(@RequestBody OrderRequest orderRequest) throws Exception {
         ProductResponse productResponse = orderService.getProduct(orderRequest);
-        String jsonResponse = JsonFormat.printer().print(productResponse);
-        return ResponseEntity.ok(jsonResponse);
+        if (productResponse != null) {
+            return ResponseEntity.ok(HttpStatus.CREATED);
+        }
+        return ResponseEntity.ok(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
     @GetMapping("/{id}")

@@ -23,3 +23,100 @@
 2024-10-01T08:56:59.325Z DEBUG 1 --- [api-gateway] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-10-01T08:57:00.281Z  INFO 1 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
 2024-10-01T08:57:00.336Z  INFO 1 --- [api-gateway] [main] c.o.apigateway.ApiGatewayApplication     : Started ApiGatewayApplication in 8.505 seconds (process running for 10.13)
+2024-10-01T09:00:12.599Z  INFO 1 --- [api-gateway] [main] c.o.apigateway.ApiGatewayApplication     : Starting ApiGatewayApplication v1 using Java 21 with PID 1 (/app/api-gateway.jar started by root in /app)
+2024-10-01T09:00:12.614Z DEBUG 1 --- [api-gateway] [main] c.o.apigateway.ApiGatewayApplication     : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-01T09:00:12.622Z  INFO 1 --- [api-gateway] [main] c.o.apigateway.ApiGatewayApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T09:00:15.297Z  INFO 1 --- [api-gateway] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fe9aadde-3645-3132-9fed-ba62d0cffe9a
+2024-10-01T09:00:15.972Z  INFO 1 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2024-10-01T09:00:15.999Z  INFO 1 --- [api-gateway] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-01T09:00:16.000Z  INFO 1 --- [api-gateway] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-01T09:00:16.091Z  INFO 1 --- [api-gateway] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-01T09:00:16.092Z  INFO 1 --- [api-gateway] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3251 ms
+2024-10-01T09:00:16.761Z TRACE 1 --- [api-gateway] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-10-01T09:00:16.876Z DEBUG 1 --- [api-gateway] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-10-01T09:00:16.905Z DEBUG 1 --- [api-gateway] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-10-01T09:00:17.152Z TRACE 1 --- [api-gateway] [main] o.s.w.s.f.support.RouterFunctionMapping  : Mapped RouterFunction routeId=product_service delegate=/v1/api/product/** -> ProxyExchangeHandlerFunction
+2024-10-01T09:00:17.166Z TRACE 1 --- [api-gateway] [main] o.s.w.s.f.support.RouterFunctionMapping  : Mapped RouterFunction routeId=order_service delegate=/v1/api/order/** -> ProxyExchangeHandlerFunction
+2024-10-01T09:00:17.167Z TRACE 1 --- [api-gateway] [main] o.s.w.s.f.support.RouterFunctionMapping  : Mapped Never -> org.springframework.cloud.gateway.server.mvc.config.RouterFunctionHolderFactory$$Lambda/0x00007fc14842afc8@44a085e5
+2024-10-01T09:00:17.210Z TRACE 1 --- [api-gateway] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-10-01T09:00:17.220Z TRACE 1 --- [api-gateway] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-10-01T09:00:17.225Z DEBUG 1 --- [api-gateway] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-10-01T09:00:17.333Z DEBUG 1 --- [api-gateway] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-01T09:00:17.437Z DEBUG 1 --- [api-gateway] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-01T09:00:18.502Z  INFO 1 --- [api-gateway] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2024-10-01T09:00:18.559Z  INFO 1 --- [api-gateway] [main] c.o.apigateway.ApiGatewayApplication     : Started ApiGatewayApplication in 7.604 seconds (process running for 8.942)
+2024-10-01T09:00:24.974Z  INFO 1 --- [api-gateway] [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:00:24.975Z  INFO 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-01T09:00:24.976Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.cloud.gateway.server.mvc.handler.GatewayMvcMultipartResolver@66121bc
+2024-10-01T09:00:24.976Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@7414fb1e
+2024-10-01T09:00:24.977Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@512a8aea
+2024-10-01T09:00:24.978Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-10-01T09:00:24.979Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-10-01T09:00:24.980Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-01T09:00:24.980Z  INFO 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-10-01T09:00:24.990Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/v1/api/order/2", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:00:25.001Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/2"
+2024-10-01T09:00:25.003Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/2"
+2024-10-01T09:00:25.004Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP GET /v1/api/order/2"
+2024-10-01T09:00:25.008Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@1c8055e0
+2024-10-01T09:00:25.390Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:00:25.392Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-10-01T09:10:11.467Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/v1/api/order/create", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:10:11.468Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-3] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/create"
+2024-10-01T09:10:11.468Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-3] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/create"
+2024-10-01T09:10:11.469Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-3] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP POST /v1/api/order/create"
+2024-10-01T09:10:11.469Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-3] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@76c1aa01
+2024-10-01T09:10:12.362Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:10:12.363Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-10-01T09:10:20.860Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/v1/api/order/all", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:10:20.864Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-4] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/all"
+2024-10-01T09:10:20.865Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-4] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/all"
+2024-10-01T09:10:20.866Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-4] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP GET /v1/api/order/all"
+2024-10-01T09:10:20.869Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-4] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@5a3bac93
+2024-10-01T09:10:20.980Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-4] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:10:20.981Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-10-01T09:11:07.155Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/v1/api/order/all", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:11:07.156Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-5] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/all"
+2024-10-01T09:11:07.156Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-5] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/all"
+2024-10-01T09:11:07.157Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-5] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP GET /v1/api/order/all"
+2024-10-01T09:11:07.157Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-5] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@1a3e5cb8
+2024-10-01T09:11:07.172Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-5] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:11:07.173Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-10-01T09:11:13.925Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/v1/api/order/5", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:11:13.926Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-6] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/5"
+2024-10-01T09:11:13.926Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-6] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/5"
+2024-10-01T09:11:13.926Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-6] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP GET /v1/api/order/5"
+2024-10-01T09:11:13.927Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-6] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@379b4b28
+2024-10-01T09:11:13.942Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:11:13.943Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-10-01T09:11:18.209Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v1/api/order/6", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:11:18.210Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-7] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/6"
+2024-10-01T09:11:18.210Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-7] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/6"
+2024-10-01T09:11:18.211Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-7] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP GET /v1/api/order/6"
+2024-10-01T09:11:18.211Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-7] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@21c8f568
+2024-10-01T09:11:18.226Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-7] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:11:18.226Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={masked}
+2024-10-01T09:11:35.535Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/v1/api/order/create", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:11:35.536Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-9] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/create"
+2024-10-01T09:11:35.536Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-9] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/create"
+2024-10-01T09:11:35.537Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-9] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP POST /v1/api/order/create"
+2024-10-01T09:11:35.537Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-9] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@5407dcb4
+2024-10-01T09:11:35.590Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-9] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:11:35.603Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-10-01T09:11:44.373Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/v1/api/order/6", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:11:44.374Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-10] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/6"
+2024-10-01T09:11:44.374Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-10] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/6"
+2024-10-01T09:11:44.374Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-10] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP GET /v1/api/order/6"
+2024-10-01T09:11:44.374Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-10] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@38169f7d
+2024-10-01T09:11:44.387Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-10] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:11:44.388Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2024-10-01T09:11:57.561Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/v1/api/order/all", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-10-01T09:11:57.562Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/product/**" does not match against value "/v1/api/order/all"
+2024-10-01T09:11:57.563Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.s.function.RequestPredicates       : Pattern "/v1/api/order/**" matches against value "/v1/api/order/all"
+2024-10-01T09:11:57.564Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.servlet.function.RouterFunctions   : Predicate "/v1/api/order/**" matches against "HTTP GET /v1/api/order/all"
+2024-10-01T09:11:57.564Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x00007fc148501648@41e86e21
+2024-10-01T09:11:57.597Z TRACE 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-10-01T09:11:57.598Z DEBUG 1 --- [api-gateway] [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
