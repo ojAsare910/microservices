@@ -1,7 +1,0 @@
-services:
-  web:
-    build: .
-    ports:
-      - "9000:9000"
-    volumes:
-      - ./logs:/app/logs

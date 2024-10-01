@@ -1,0 +1,40 @@
+services:
+  grpc-server:
+    image: grpc-server-local
+    container_name: grpc-server
+    ports:
+      - "8081:8081"
+      - "9090:9090"
+    networks:
+      - grpc-network
+    volumes:
+      - ./logs:/app/logs
+
+  grpc-client:
+    image: grpc-client-local
+    container_name: grpc-client
+    ports:
+      - "8082:8082"
+    depends_on:
+      - grpc-server
+    networks:
+      - grpc-network
+    volumes:
+      - ./logs:/app/logs
+
+  api-gateway:
+    image: api-gateway-local
+    container_name: api-gateway
+    ports:
+      - "9000:9000"
+    depends_on:
+      - grpc-server
+      - grpc-client
+    networks:
+      - grpc-network
+    volumes:
+      - ./logs:/app/logs
+
+networks:
+  grpc-network:
+    driver: bridge
