@@ -1,39 +1,53 @@
 services:
+  eureka-server:
+    build:
+      context: ./eureka-server/
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - grpc-network
+
   grpc-server:
-    image: grpc-server-local
+    build:
+      context: ./product/
+      dockerfile: Dockerfile
     container_name: grpc-server
     ports:
       - "8081:8081"
       - "9090:9090"
+    depends_on:
+      - eureka-server
     networks:
       - grpc-network
-    volumes:
-      - ./logs:/app/logs
 
   grpc-client:
-    image: grpc-client-local
+    build:
+      context: ./order-service/
+      dockerfile: Dockerfile
     container_name: grpc-client
     ports:
       - "8082:8082"
     depends_on:
       - grpc-server
+      - eureka-server
     networks:
       - grpc-network
-    volumes:
-      - ./logs:/app/logs
 
   api-gateway:
-    image: api-gateway-local
+    build:
+      context: ./api-gateway/
+      dockerfile: Dockerfile
     container_name: api-gateway
     ports:
       - "9000:9000"
     depends_on:
       - grpc-server
       - grpc-client
+      - eureka-server
     networks:
       - grpc-network
-    volumes:
-      - ./logs:/app/logs
 
 networks:
   grpc-network:

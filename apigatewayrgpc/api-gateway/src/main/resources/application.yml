@@ -10,5 +10,9 @@ logging:
         web: TRACE
     root: INFO
     com.ojasare.apigateway: TRACE
-  file:
-    name: logs/api-gateway.log
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

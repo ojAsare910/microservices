@@ -18,8 +18,12 @@ logging:
         web: TRACE
     root: INFO
     com.ojasare.productservice: TRACE
-  file:
-    name: logs/product-service.log
 grpc:
   server:
     port: 9090
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
