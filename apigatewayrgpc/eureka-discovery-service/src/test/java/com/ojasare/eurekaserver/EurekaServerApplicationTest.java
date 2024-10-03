@@ -1,10 +1,10 @@
-package com.ojasare.apigateway;
+package com.ojasare.eurekaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiGatewayApplicationTests {
+class EurekaServerApplicationTest {
 
     @Test
     void contextLoads() {

@@ -30,7 +30,7 @@ public class OrderService implements OrderIService {
     }
 
     @Override
-    public ProductResponse getProduct(OrderRequest orderRequest) {
+    public ProductResponse createOrder(OrderRequest orderRequest) {
         ProductRequest productRequest = ProductRequest.newBuilder()
                 .setOrderId(orderRequest.productId())
                 .build();
