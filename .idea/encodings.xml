@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/eureka-discovery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/order-service/target/generated-sources/protobuf/grpc-java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/order-service/target/generated-sources/protobuf/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/product/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/product/target/generated-sources/protobuf/grpc-java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigatewayrgpc/product/target/generated-sources/protobuf/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq/rabbitmqproducer/src/main/java" charset="UTF-8" />
+  </component>
+</project>

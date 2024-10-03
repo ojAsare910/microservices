@@ -1,10 +1,11 @@
 package com.ojasare.grpcservice.controller;
 
-import com.google.protobuf.util.JsonFormat;
 import com.ojasare.grpcservice.dto.OrderRequest;
 import com.ojasare.grpcservice.dto.OrderResponse;
+import com.ojasare.grpcservice.dto.ProductMessage;
 import com.ojasare.grpcservice.grpc.ProductResponse;
 import com.ojasare.grpcservice.service.OrderService;
+import com.ojasare.grpcservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,21 +19,15 @@ import java.util.List;
 public class OrderController {
 
     private final OrderService orderService;
-
-//    @PostMapping("/create")
-//    public ResponseEntity<String> getProductOrder(@RequestBody OrderRequest orderRequest) throws Exception {
-//        ProductResponse productResponse = orderService.getProduct(orderRequest);
-//        String jsonResponse = JsonFormat.printer().print(productResponse);
-//        return ResponseEntity.ok(jsonResponse);
-//    }
+    private final ProductService productService;
 
     @PostMapping("/create")
-    public ResponseEntity<?> placeOrder(@RequestBody OrderRequest orderRequest) throws Exception {
-        ProductResponse productResponse = orderService.getProduct(orderRequest);
+    public ResponseEntity<String> placeOrder(@RequestBody OrderRequest orderRequest) throws Exception {
+        ProductResponse productResponse = orderService.createOrder(orderRequest);
         if (productResponse != null) {
-            return ResponseEntity.ok(HttpStatus.CREATED);
+            return new ResponseEntity<>("Order Added Successfully", HttpStatus.OK);
         }
-        return ResponseEntity.ok(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
+        return new ResponseEntity<>("Order Not Saved", HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping("/{id}")
@@ -45,6 +40,12 @@ public class OrderController {
     public ResponseEntity<List<OrderResponse>> getAllOrders() {
         List<OrderResponse> orders = orderService.getOrders();
         return ResponseEntity.ok(orders);
+    }
+
+    @GetMapping("/product/{id}")
+    public ResponseEntity<ProductMessage> getProduct(@PathVariable("id") Long id) {
+        ProductMessage productMessage = productService.getProduct(id);
+        return ResponseEntity.ok(productMessage);
     }
 
 }

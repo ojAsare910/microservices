@@ -1,7 +1,7 @@
 services:
   eureka-server:
     build:
-      context: ./eureka-server/
+      context: ./eureka-discovery-service/
       dockerfile: Dockerfile
     container_name: eureka-server
     ports:
@@ -19,6 +19,7 @@ services:
       - "9090:9090"
     depends_on:
       - eureka-server
+      - rabbitmq
     networks:
       - grpc-network
 
@@ -32,6 +33,19 @@ services:
     depends_on:
       - grpc-server
       - eureka-server
+      - rabbitmq
+    networks:
+      - grpc-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: testGuest
+      RABBITMQ_DEFAULT_PASS: testGuest
     networks:
       - grpc-network
 
