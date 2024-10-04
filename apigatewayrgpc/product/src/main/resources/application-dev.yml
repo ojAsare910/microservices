@@ -2,7 +2,7 @@ spring:
   application:
     name: product
   datasource:
-    url: jdbc:postgresql://192.168.56.38:5432/product
+    url: jdbc:postgresql://postgres:5432/product
     username: postgres
     password: password123
   jpa:
@@ -12,8 +12,8 @@ spring:
   rabbitmq:
     host: rabbitmq
     port: 5672
-    username: testGuest
-    password: testGuest
+    username: guest
+    password: guest
 rabbitmq:
   queue:
     name: product_queue
@@ -35,3 +35,5 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true

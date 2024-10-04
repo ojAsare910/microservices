@@ -1,7 +1,8 @@
+
 services:
   eureka-server:
     build:
-      context: ./eureka-discovery-service/
+      context: ./eureka-server/
       dockerfile: Dockerfile
     container_name: eureka-server
     ports:
@@ -20,8 +21,18 @@ services:
     depends_on:
       - eureka-server
       - rabbitmq
+      - postgres
     networks:
       - grpc-network
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: 'true'
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/product
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password123
 
   grpc-client:
     build:
@@ -34,8 +45,19 @@ services:
       - grpc-server
       - eureka-server
       - rabbitmq
+      - postgres
     networks:
       - grpc-network
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: 'true'
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/order
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password123
+      RABBITMQ_QUEUE_NAME: product_queue
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -49,6 +71,19 @@ services:
     networks:
       - grpc-network
 
+  postgres:
+    image: postgres:alpine
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password123
+    networks:
+      - grpc-network
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
   api-gateway:
     build:
       context: ./api-gateway/
@@ -58,10 +93,14 @@ services:
       - "9000:9000"
     depends_on:
       - grpc-server
-      - grpc-client
-      - eureka-server
     networks:
       - grpc-network
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: 'true'
+
+volumes:
+  postgres-data:
 
 networks:
   grpc-network:
